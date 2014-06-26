@@ -1,4 +1,4 @@
-adventure
-=========
+Adventure
+=======
 
-Standard Basekit Template
+BaseKit Standard Template
