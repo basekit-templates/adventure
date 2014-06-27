@@ -16,12 +16,13 @@ body {
 	width: 100%; 
     height: 100%;
     background-position: 0px 0px;
+    color:@color-swatch1;
 }
 
 .wrapper {
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
-	padding: 0 10%;
+	padding: 4% 2%;
 }
 
 .page-wrap {
@@ -37,7 +38,7 @@ body {
 header.bk-header {
     padding:20px 0px;
     background-color:@color-swatch3;
-    border-bottom:3px solid @color-swatch1;
+	border-bottom:5px solid lighten(@color-swatch3,60%);
 }
 
 .bk-pt-default header.bk-header {
@@ -75,15 +76,14 @@ header.bk-header {
 	width: 60%;
 	float: right;
 	margin-top:15px;
-}
-
-#textwidgetbox1 .bk-content-text p {
-	font-family:@font-swatch4-font-family; 
-	font-weight: @font-swatch4-font-weight; 
-	color:@font-swatch4-color; 
-	line-height:@font-swatch4-line-height; 
-	letter-spacing: @font-swatch4-letter-spacing; 
-	font-size: @font-swatch4-font-size;
+	span {
+		font-family:@font-swatch4-font-family; 
+		font-weight: @font-swatch4-font-weight; 
+		color:@font-swatch6-color; 
+		line-height:@font-swatch4-line-height; 
+		letter-spacing: @font-swatch4-letter-spacing; 
+		font-size: @font-swatch4-font-size;
+	}
 }
 
 .headerwrapper {
@@ -109,9 +109,6 @@ header.bk-header {
 	FEATURE
 	=============================== */
 
-.widget.feature {
-	margin-bottom:20px;
-}
 
 .widget.feature .feature-bgimg .content {
 	background-color: rgba(0, 0, 0, 0.3);
@@ -119,7 +116,7 @@ header.bk-header {
 }
 
 .widget.feature h2, .widget.feature h3 {
-	color:@font-swatch7-color;
+	color:@font-swatch1-color;
 }
 
 .widget.feature h3 {
@@ -133,16 +130,22 @@ header.bk-header {
 
 .widget.feature .feature-bgimg .content .spare {
 	display: block;
-	background-color: rgba(255, 255, 255, 0.53);
+	background-color: rgba(255, 255, 255, 0.6);
+	float:left;
 }
 /*	===============================
 	Extended Navigation
 	=============================== */
 
 .navbar {
-	background-color:@color-swatch1;
-	border-bottom:4px solid @color-swatch2;
-	padding:5px 0px;
+	background-color:darken(@color-swatch1,15%);
+	margin-top:-70px;
+	.left {
+		float:left;
+	}
+	.right {
+		float:right;
+	}
 }
 
 .widget.extendednavigation {
@@ -150,6 +153,7 @@ header.bk-header {
 	position: relative;
 	width: 100%;
 	vertical-align: bottom;
+	margin-top:20px;
 	@media only screen and (max-width: 900px) {
 		display: block;
 		margin-top: 15px;
@@ -166,7 +170,7 @@ header.bk-header {
 }
 
 .widget .extendednavigation ul li:hover ul {
-	background-color:lighten(@color-swatch3,15%);
+	background-color:lighten(@color-swatch3,60%);
 }
 
 .widget .extendednavigation ul li.folder:after {
@@ -178,18 +182,11 @@ header.bk-header {
 }
 
 .widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
-	padding:5px 20px;
+	padding:10px 35px;
 }
 
 .widget .extendednavigation ul li.folder:after {
 	top:48%;
-}
-
-.widget .extendednavigation > ul > li > a:hover {
-	color:@font-swatch6-color;
-	border-bottom:4px solid @color-swatch7;
-	margin-bottom: -9px;
-	padding-bottom: 10px;
 }
 
 .widget .extendednavigation ul li.folder .text:hover {
@@ -206,6 +203,10 @@ header.bk-header {
 
 .widget .extendednavigation ul > li.folder > .text {
 	color:@font-swatch6-color;
+}
+
+.widget .extendednavigation ul li a:hover {
+	background-color:@color-swatch3;
 }
 
 /* ===============================
@@ -257,14 +258,10 @@ header.bk-header {
 	padding-bottom: 45px;
 	background-color:darken(@color-swatch1,5%);
 	margin-bottom:30px;
-	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 }
 
 .blog-search-input {
 	width: 40%;
-	height: 36px;
 	border-radius: 0;
 	-webkit-appearance: none;
 }
@@ -278,16 +275,13 @@ header.bk-header {
 }
 
 .blog-post-item {
-	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 	padding-bottom: 40px;
 	background-color:darken(@color-swatch1,5%);
 	margin-bottom: 40px;
 }
 
 .blog-search-submit-button {
-	padding:4px 14px 8px 14px;
+	padding: 7px 14px 5px 14px;
 	background-color:@color-swatch3;
 	border:0;
 	margin-bottom:10px;
@@ -312,17 +306,11 @@ header.bk-header {
 .menu-item-promoted {
 	background-color: darken(@color-swatch1,6%);
 	padding:20px!important;
-	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 }
 
 .menu-subsection-wrapper.menu-subsection-promoted {
 	background-color: darken(@color-swatch1,3%);
 	padding:40px;
-	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 }
 
 .main.wrapper {
@@ -352,9 +340,6 @@ header.bk-header {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    -webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
     img {
         display: none;
         border: none;
@@ -374,13 +359,11 @@ input,
 .signupform fieldset input, 
 .widget.contactform form fieldset textarea, 
 .widget.contactform form fieldset input  {
-	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	background-color:@color-swatch1;
-	border:1px solid darken(@color-swatch1,5%);
+	background-color:lighten(@color-swatch3,10%);
     text-indent:3px;
     border-radius:0;
+    color:@font-swatch6-color;
+    border:3px solid lighten(@color-swatch3,60%);
 }
 
 .widget.ecomcheckout .checkout-order-button, 
@@ -390,18 +373,14 @@ input,
 .blog-search-submit-button, 
 .widget.button button, button.btn {
 	background-color:@color-swatch3;
-	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
+	border:3px solid lighten(@color-swatch3,60%);
 }
 
 .widget.paypalbuynow .widget.button.paypal, 
 .widget.tweet a, 
 .widget.dropbox button, .widget.socialicons span a {
-	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 	background-color:@color-swatch3;
+	border: 3px solid lighten(@color-swatch3,60%);
 }
 
 .widget.button button:hover, .blog-search-submit-button:hover, button.btn:hover {
@@ -409,7 +388,7 @@ input,
 }
 
 .widget.profile form button {
-	padding: 7px 14px 11px;
+	padding: 7px 14px 6px;
 }
 
 .btn {
@@ -426,7 +405,7 @@ input,
 }
 
 .signupform fieldset button {
-	padding: 5px 14px 10px 14px;
+	padding: 5px 14px 4px 14px;
 	margin: 5px 0px;
 }
 
@@ -482,15 +461,21 @@ textarea.message {
 	margin-top:5px;
 }
 
+.widget.twitter .twitter-profile-pic {
+	border: 3px solid lighten(@color-swatch3,60%);
+}
+
 .twitter ul li a {
 	font-size: 14px;
 	font-weight: 300;
 }
 
-.widget.twitter .twitter-profile-pic img {
-	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
+.widget.companyname a {
+	font-weight:@font-swatch10-font-weight;
+}
+
+.form-group.productlist-search button.btn {
+	padding:7px 14px 6px;
 }
 
 /*	===============================
@@ -517,9 +502,6 @@ textarea.message {
     background-color: darken(@color-swatch1,3%);
     background-position-x: 98%;
     background-position-y: 53%;
-    -webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 	background-color:@color-swatch1;
 	border:1px solid darken(@color-swatch1,5%);
     border-radius:0;
@@ -545,9 +527,6 @@ textarea.message {
     background-color: darken(@color-swatch1,3%);
     background-position-x: 99%;
     background-position-y: 53%;
-    -webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 	background-color:@color-swatch1;
 	border:1px solid darken(@color-swatch1,5%);
     border-radius:0;
@@ -573,9 +552,6 @@ select {
     background-color: darken(@color-swatch1,3%);
     background-position-x: 95%;
     background-position-y: 53%;
-    -webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 	background-color:@color-swatch1;
 	border:1px solid darken(@color-swatch1,5%);
     border-radius:0;
@@ -605,9 +581,6 @@ select::-ms-expand {
 }
 
 .ecom-product-go-to-checkout-btn {
-	-webkit-box-shadow: 2px 2px 0px 1px #dadada;
-	-moz-box-shadow: 2px 2px 0px 1px #dadada;
-	box-shadow: 2px 2px 0px 1px #dadada;
 	margin-top:20px;
 	padding-top:13px;
 	&:hover{
@@ -625,8 +598,8 @@ select::-ms-expand {
 	margin:0 10%;
 }
 
-#productlist-search {
-	height:40px;
+.widget.ecombasket .ecombasket-pull {
+	border: 3px solid lighten(@color-swatch3,60%);
 }
 
 /* ===============================
@@ -766,12 +739,13 @@ footer .widget.profile .bk-profile-socialicons span a {
 	text-align:center;
 }
 
-.widgetfooter {
+.bk-footer  {
 	padding:50px 0px;
 	background-color:@color-swatch3;
+	border-top:5px solid lighten(@color-swatch3,60%);
 }
 
-.widgetfooter .widget.companyname a {
+.bk-footer .widget.companyname a {
 	color:@font-swatch7-color;
 }
 
@@ -779,7 +753,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 	float:left;
 }
 
-.widgetfooter .right {
+.bk-footer .right {
 	padding-top:20px;
 	float:right;
 }
@@ -943,9 +917,10 @@ footer .widget.profile .bk-profile-socialicons span a {
 		margin:0px auto;
 		display:table;
 	}
-	.widget.gallery ul li {
-		width: 50%;
-		padding-bottom: 50%;
+	.navbar .left {
+		float: left;
+		padding: 20px 0px;
+		width: 100%;
 	}
 
 }	
