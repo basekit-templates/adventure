@@ -179,12 +179,12 @@ header.bk-header {
 }
 
 .widget .extendednavigation ul li.folder:after {
-	border-top-color:lighten(@color-swatch3,15%);
+	border-top-color:@font-swatch6-color;
 }
 
 .widget .extendednavigation ul li a {
 	padding: 5px 20px;
-}
+} 
 
 .widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
 	padding:20px 35px;
@@ -359,7 +359,7 @@ input,
     text-indent:3px;
     border-radius:0;
     color:@font-swatch6-color;
-    border:3px solid lighten(@color-swatch3,60%);
+    border:3px solid lighten(@color-swatch3,40%);
 }
 
 .widget.ecomcheckout .checkout-order-button, 
@@ -369,18 +369,18 @@ input,
 .blog-search-submit-button, 
 .widget.button button, button.btn {
 	background-color:@color-swatch3;
-	border:3px solid lighten(@color-swatch3,60%);
+	border:3px solid lighten(@color-swatch3,40%);
 }
 
 .widget.paypalbuynow .widget.button.paypal, 
 .widget.tweet a, 
 .widget.dropbox button, .widget.socialicons span a {
 	background-color:@color-swatch3;
-	border: 3px solid lighten(@color-swatch3,60%);
+	border: 3px solid lighten(@color-swatch3,40%);
 }
 
 .widget.button button:hover, .blog-search-submit-button:hover, button.btn:hover {
-	background-color:@color-swatch7!important;
+	background-color:lighten(@color-swatch3,10%)!important;
 }
 
 .widget.profile form button {
@@ -468,7 +468,7 @@ textarea.message {
 	padding: 20px 20px 0px 20px;
 	background-color:lighten(@color-swatch3,90%);
     border-radius:0;
-    border:3px solid lighten(@color-swatch3,60%);
+    border:3px solid @color-swatch7;
 }
 
 .twitter ul li a {
@@ -590,7 +590,7 @@ select::-ms-expand {
 	margin-top:20px;
 	padding-top:13px;
 	&:hover{
-		background-color:@color-swatch7;
+		background-color:lighten(@color-swatch3,10%);
 		text-decoration: none;
 	}
 }
