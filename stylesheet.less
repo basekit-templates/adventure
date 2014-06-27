@@ -74,9 +74,6 @@ header.bk-header {
 	display: inline-block;
 	width: 35%;
 	float:left;
-	@media only screen and (max-width: 900px) {
-		width: 100%;
-	}
 }
 
 #textwidgetbox1 {
@@ -143,6 +140,7 @@ header.bk-header {
 	display: block;
 	background-color: rgba(255, 255, 255, 0.8);
 	float:left;
+	margin-bottom:50px;
 }
 /*	===============================
 	Extended Navigation
@@ -166,11 +164,6 @@ header.bk-header {
 	position: relative;
 	width: 100%;
 	vertical-align: bottom;
-	@media only screen and (max-width: 900px) {
-		display: block;
-		margin-top: 15px;
-		width: 100%;
-	}
 	@media @tablet {
 		margin-top: 0;
 	}
@@ -779,6 +772,14 @@ footer .widget.profile .bk-profile-socialicons span a {
 		width:90%;
 		padding:0 5%;
 	}
+	.widget.feature h2 {
+        font-size: bkscale(@font-swatch8-font-size, 0.4);
+        line-height: bkscale(@font-swatch8-line-height, 0.4);
+    }
+    .widget.feature h3 {
+        font-size: bkscale(@font-swatch9-font-size, 0.9);
+        line-height: bkscale(@font-swatch9-line-height, 0.9);
+    }
 }
 @media only screen and (max-width: 1024px) {
 	.bk-footer .contactform input, .bk-footer .contactform textarea {
@@ -922,7 +923,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 	.navbar .left {
 		float: left;
-		padding: 20px 0px;
 		width: 100%;
 	}
 	.extendednavigation ul {
@@ -941,16 +941,24 @@ footer .widget.profile .bk-profile-socialicons span a {
 		margin-top: 50px;
 		padding-top: 30px;
 	}
+	.widget.feature h2 {
+        font-size: bkscale(@font-swatch8-font-size, 0.8);
+        line-height: bkscale(@font-swatch8-line-height, 0.8);
+    }
+    .widget.feature h3 {
+        font-size: bkscale(@font-swatch9-font-size, 1);
+        line-height: bkscale(@font-swatch9-line-height, 1);
+    }
 }	
 
 @media only screen and (max-width: 480px) {
 	.widget.feature h2 {
-        font-size: bkscale(@font-swatch2-font-size, 0.9);
-        line-height: bkscale(@font-swatch2-line-height, 0.9);
+        font-size: bkscale(@font-swatch8-font-size, 0.4);
+        line-height: bkscale(@font-swatch8-line-height, 0.4);
     }
     .widget.feature h3 {
-        font-size: bkscale(@font-swatch2-font-size, 0.6);
-        line-height: bkscale(@font-swatch2-line-height, 0.6);
+        font-size: bkscale(@font-swatch9-font-size, 0.9);
+        line-height: bkscale(@font-swatch9-line-height, 0.9);
     }
 	.search-term {
 		display:block;
@@ -1020,5 +1028,18 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 	.widget.feature .feature-bgimg .content {
 		height: 400px;
+	}
+	.widget.feature {
+		display:none;
+	}
+	.navbar {
+		background-color:@color-swatch3;
+		margin-top:0;
+		padding:0;
+	}
+	.navbar .left {
+		float: left;
+		padding: 30px 0px 10px 2px;
+		width: 100%;
 	}
 }
