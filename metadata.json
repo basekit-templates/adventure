@@ -1,13 +1,13 @@
 {
-	"name":"ak-studio",
-	"thumbnail":"ak-studio.png",
-	"screenshot":"ak-studio.png",
+	"name":"adventure",
+	"thumbnail":"adventure.png",
+	"screenshot":"adventure.png",
 	"templateType":"Standard Template",
         "pageTypes": [
         "home"
     ],
     "tags": {
-    "en": ["clean", "technology", "white", "modern", "blog", "professional", "simple", "sans serif"],
+    "en": ["clean", "technology", "white", "dark", "modern", "blog", "feature", "professional", "simple", "sans serif"],
     "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
     "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif"]
     },

@@ -27,6 +27,8 @@ body {
 .page-wrap {
 	background-color:@color-swatch1;
 	padding:40px 0px;
+	width: 80%;
+	margin: 0 10%;
 }
 
 /*	===============================
@@ -46,6 +48,18 @@ body {
 	margin-top:0;
 }
 
+.bk-pt-default .widget .extendednavigation ul li a, .bk-pt-default .widget .extendednavigation ul > li.folder > .text {
+	color:@font-swatch4-color;
+}
+
+
+.bk-pt-default .widget .extendednavigation ul li a:hover {
+	color:@font-swatch6-color;
+}
+
+.bk-pt-default .widget .extendednavigation ul li.folder:after {
+	border-top-color:@color-swatch3;
+}
 
 /*	===============================
 	Header
@@ -213,6 +227,12 @@ header.bk-header {
 .widget .extendednavigation ul li a:hover {
 	background-color:@color-swatch3;
 }
+
+.widget .extendednavigation ul li.folder .text:hover {
+	background-color:@color-swatch3;
+}
+
+
 
 /*	===============================
 	Blog
@@ -959,6 +979,33 @@ footer .widget.profile .bk-profile-socialicons span a {
         font-size: bkscale(@font-swatch9-font-size, 1);
         line-height: bkscale(@font-swatch9-line-height, 1);
     }
+    .page-wrap {
+		background-color:@color-swatch1;
+		padding:40px 0px;
+		width: 100%;
+		margin: 0;
+	}
+	.widget .extendednavigation ul li a:hover, .widget .extendednavigation ul li.folder .text:hover {
+		background-color:transparent;
+	}
+	.bk-pt-default .navbar .left {
+		margin: 30px 0px 0px 0px;
+	}
+	.bk-pt-default .widget .extendednavigation ul li a, .bk-pt-default .widget .extendednavigation ul > li.folder > .text {
+		color:@font-swatch6-color;
+	}
+	.bk-pt-default .widget .extendednavigation > ul > li > a {
+		padding:0px 20px;
+	}
+	.bk-pt-default .navbar .widget.profile {
+		padding-top:10px;
+	}
+	.bk-pt-default .navbar {
+		background-color:@color-swatch3;
+	}
+	.bk-pt-default header.bk-header {
+		padding:20px 0px 50px;
+	}
 }	
 
 @media only screen and (max-width: 480px) {
@@ -1051,5 +1098,8 @@ footer .widget.profile .bk-profile-socialicons span a {
 		float: left;
 		padding: 30px 0px 10px 2px;
 		width: 100%;
+	}
+	.bk-pt-default .navbar .left {
+		margin:0px;
 	}
 }
