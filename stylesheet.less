@@ -285,6 +285,10 @@ header.bk-header {
 	font-size: @font-swatch7-font-size;
 }
 
+.blog-post-item time {
+	padding:0px 40px;
+}
+
 /*	===============================
 	Menu
 	=============================== */
@@ -457,8 +461,14 @@ textarea.message {
 	margin-top:5px;
 }
 
-.widget.twitter .twitter-profile-pic {
-	border: 3px solid lighten(@color-swatch3,60%);
+
+.widget.twitter ul {
+	padding: 0;
+	margin: 0;
+	padding: 20px 20px 0px 20px;
+	background-color:lighten(@color-swatch3,90%);
+    border-radius:0;
+    border:3px solid lighten(@color-swatch3,60%);
 }
 
 .twitter ul li a {
