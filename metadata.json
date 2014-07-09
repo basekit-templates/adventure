@@ -73,7 +73,7 @@
             "font-family": "\"Open sans\", \"Helvetica\", Arial, sans-serif",
             "font-size": "24px",
             "font-weight": "300",
-            "line-height": "42px",
+            "line-height": "32px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
