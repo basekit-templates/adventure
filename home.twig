@@ -18,7 +18,7 @@
 {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': false})|raw}} 
 
 <div class="navbar clearfix">
-    <div class="left">
+    <div class="navcontainer">
         {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
     </div>
 </div>
@@ -38,7 +38,7 @@
               {{widget('companyname', 'thisunqiuewidgetname', {"business": "profile"})|raw}}
           </div>
           <div class="right">
-              {{widget('signupform', 'thisunqiuewidgetname1', {'text': 'Send', 'label': 'Your Email', 'formTitle': 'Signup Form', 'email': 'profile'})|raw}}
+              {{widget('profile', 'thisunqiuewidgetname1', { 'profileType':'socialicons', 'socialicons':'form', 'refreshtime':'1800000'})|raw}}
           </div>
       </div>
 </footer>

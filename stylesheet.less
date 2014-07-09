@@ -171,7 +171,7 @@ header.bk-header {
 
 .navbar {
 	background-color: rgba(0, 0, 0, 0.3);
-	margin-top: -70px;
+	margin-top: -66px;
 	position: relative;
 	.left {
 		float:left;
@@ -318,6 +318,10 @@ header.bk-header {
 	padding:0px 40px;
 }
 
+.blog-post-category p {
+	padding:0;
+}
+
 /*	===============================
 	Menu
 	=============================== */
@@ -440,6 +444,14 @@ button.btn:hover {
 	padding: 6px 14px 5px 14px;
 	margin: 5px 0px;
 }
+
+.signupform fieldset label {
+	float: left;
+	width: 100%;
+	margin-bottom:0;
+	display: inline-block;
+}
+
 
 .widget.button button {
 	&:hover{
@@ -697,7 +709,7 @@ select::-ms-expand {
             &:after {
                 content: "\2190";
                 color: #fff;
-                top: 10px;
+                top: 6px;
                 @media @mobile {
                     top: 4px;
                 }
@@ -707,7 +719,7 @@ select::-ms-expand {
             &:after {
                 content: "\2192";
                 color: #fff;
-                top: 10px;
+                top: 6px;
                 @media @mobile {
                     top: 4px;
                 }
@@ -766,7 +778,7 @@ select::-ms-expand {
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-play:after {
-    top:-7px;
+    top:-10px;
     @media @mobile {
         top: -12px;
     }
@@ -779,6 +791,9 @@ select::-ms-expand {
 
 footer .widget.profile .bk-profile-socialicons span a {
 	background-color:@color-swatch3;
+	&:hover {
+		background-color: lighten(@color-swatch3,60%);
+	}
 }
 
 .footer-border {
@@ -797,6 +812,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 
 .left .widget.profile, .bk-footer .left {
 	float:left;
+	padding-top: 10px;
 }
 
 .bk-footer .right {

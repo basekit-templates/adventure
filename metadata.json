@@ -105,7 +105,7 @@
             "font-family": "\"Open sans\", \"Helvetica\", Arial, sans-serif",
             "font-size": "16px",
             "font-weight": "700",
-            "line-height": "30px",
+            "line-height": "26px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit",
             "color-hover": "@color-swatch1",
