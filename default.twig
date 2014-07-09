@@ -32,11 +32,10 @@
     <footer class="bk-footer clearfix">
           <div class="headerwrapper">
               <div class="left">
-              {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
                   {{widget('companyname', 'thisunqiuewidgetname', {"business": "profile"})|raw}}
               </div>
               <div class="right">
-                  {{widget('signupform', 'thisunqiuewidgetname1', {'text': 'Send', 'label': 'Your Email',    'formTitle': 'Signup Form', 'email': 'profile'})|raw}}
+                  {{widget('profile', 'thisunqiuewidgetname1', { 'profileType':'socialicons',     'socialicons':'form', 'refreshtime':'1800000'})|raw}}
               </div>
           </div>
     </footer>
