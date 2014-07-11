@@ -3,25 +3,24 @@
 
 {% block content %}
 
-<header class="bk-header clearfix">
-      <div class="headerwrapper">
+<header class="bk-header">
+    <div class="headerwrapper clearfix">
         <div class="logo-container">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "ADVENTURE"})|raw}}
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
         <div class="textwidget">
-            {{widget('content', 'textwidgetbox1', {content: '<p style="text-align: right">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut"</p>', lines: 'all'})|raw}}
+            {{widget('content', 'textwidgetbox1', {content: '<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut"</p>', lines: 'all'})|raw}}
         </div>
-       </div>
-  </header>
+    </div>
+</header>
 
-<div class="featurebackground">
-    {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': false})|raw}} 
-</div>
-
-<div class="navbar clearfix">
-    {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
-</div>
+<section class="feature-section">
+    {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}} 
+    <div class="navbar clearfix">
+        {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+    </div>
+</section>
 
 <div class="page-wrap">
     <div class="headerwrapper">
@@ -32,14 +31,14 @@
 </div>
 
 <footer class="bk-footer clearfix">
-      <div class="headerwrapper">
-          <div class="left">
-              {{widget('companyname', 'thisunqiuewidgetname', {"business": "profile"})|raw}}
-          </div>
-          <div class="right">
-              {{widget('profile', 'thisunqiuewidgetname1', { 'profileType':'socialicons', 'socialicons':'form', 'refreshtime':'1800000'})|raw}}
-          </div>
-      </div>
+    <div class="headerwrapper">
+        <div class="left"> 
+            {{widget('companyname', 'thisunqiuewidgetname', {"business": "profile"})|raw}}
+        </div>
+        <div class="right">
+            {{widget('profile', 'footer-profile', {'profileType':'form','form':'profile'})|raw}}
+        </div>
+    </div>
 </footer>
 
 {% endblock %}

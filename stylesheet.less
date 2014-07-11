@@ -71,6 +71,12 @@ header.bk-header {
     padding:30px 0px;
     background-color:@color-swatch3;
 	border-bottom:5px solid lighten(@color-swatch3,60%);
+	@media @tablet {
+		padding: 0 0 60px;
+	}
+	.textwidget {
+		text-align: right;
+	}
 }
 
 .widget {
@@ -110,13 +116,17 @@ header.bk-header {
 	}
 }
 
-.textwidget p {
-	font-family:@font-swatch6-font-family; 
-	font-weight: @font-swatch6-font-weight; 
-	color:@font-swatch6-color; 
-	line-height:@font-swatch6-line-height; 
-	letter-spacing: @font-swatch6-letter-spacing; 
-	font-size: @font-swatch6-font-size;
+.textwidget {
+	h1, h2, h3, h4, p {
+		color:@font-swatch6-color; 
+	}
+	p {
+		font-family:@font-swatch6-font-family; 
+		font-weight: @font-swatch6-font-weight; 
+		line-height:@font-swatch6-line-height; 
+		letter-spacing: @font-swatch6-letter-spacing; 
+		font-size: @font-swatch6-font-size;
+	}
 }
 
 .headerwrapper {
@@ -131,7 +141,7 @@ header.bk-header {
 
 .widgetheader .right {
 	padding-top:20px;
-	float:right;
+	float: right;
 }
 
 .widget.content .bk-content-text {
@@ -139,86 +149,28 @@ header.bk-header {
 }
 
 /*	===============================
-	FEATURE
-	=============================== */
-
-.featurebackground {
-    min-height:67px;
-    background-color:lighten(@color-swatch3,10%);
-    width: 100%;
-    height:100%;
-}
-
-.widget.feature .feature-bgimg .content {
-	background-color: rgba(0, 0, 0, 0.3);
-	height:700px;
-}
-
-.widget.feature h2, .widget.feature h3 {
-	color:@font-swatch1-color;
-}
-
-.widget.feature h3 {
-	font-size:@font-swatch4-font-size;
-}
-
-.widget.feature .feature-bgimg .content button {
-	box-shadow: none;
-}
-
-
-.widget.feature .feature-bgimg .content .spare {
-	display: block;
-	background-color: rgba(255, 255, 255, 0.8);
-	float:left;
-	margin-bottom:50px;
-}
-
-.featurebtn-container {
-    position: relative;
-    margin-top: -90px;
-    padding-bottom: 90px;
-    text-align: center;
-}
-
-/*	===============================
 	Extended Navigation
 	=============================== */
 
-.navbar {
-	padding: 0;
-	width: 100%;
-	position: relative;
-	margin-top:-66px;
-	background-color:@font-swatch6-background-color;
-	.left {
-		float:left;
-	}
-}
-
-.navbar .widget.profile {
-	float:right;
-}
-
-.widget.extendednavigation {
-	display: inline-block;
-	position: relative;
-	width: 100%;
-	vertical-align: bottom;
-	@media @tablet {
-		margin-top: 0;
-	}
+.widget .extendednavigation {
 	ul {
-		@media only screen and (max-width: 900px) {
-			float: none;
+		@media @tablet {
+			padding-top: 20px;
+		}
+	}
+	a.pull {
+		@media @tablet {
+			position: absolute;
+			top: -60px;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto;
+			width: 26px;
+			height: 20px;
 		}
 	}
 }
-
-.widget .extendednavigation ul li:hover ul {
-	background-color:lighten(@color-swatch3,60%);
-}
-
 .widget .extendednavigation ul li.folder:after {
 	border-top-color:@font-swatch6-color;
 	top:48%;
@@ -253,7 +205,55 @@ header.bk-header {
 	background-color:@color-swatch3;
 }
 
+/*	===============================
+	FEATURE
+	=============================== */
 
+// Feature Section
+.feature-section {
+	position: relative;
+}
+
+.navbar {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	@media @tablet {
+		background-color: transparent;
+		bottom: inherit;
+		top: 0;
+		.left {
+			float: left;
+			width: 100%;
+		}
+		.widget.profile {
+			float:none;
+			text-align:center;
+		}
+		.widget.profile {
+			float: none;
+			text-align: center;
+			margin-top: 50px;
+			padding-top: 30px;
+		}
+	}
+}
+
+.widget.feature .feature-bgimg .content {
+	background-color: rgba(0, 0, 0, 0.3);
+	height:700px;
+}
+
+.widget.feature .feature-bgimg .content button {
+	box-shadow: none;
+}
+
+.widget.feature .feature-bgimg .content .spare {
+	display: block;
+	background-color: rgba(255, 255, 255, 0.8);
+	margin: 0;
+}
 
 /*	===============================
 	Blog
@@ -907,11 +907,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 		width: 100%!important;
 		left: inherit !important;
 	}
-	.widget .extendednavigation ul {
-		padding-top:0;
-		top: 15px;
-		position: absolute!important;
-	}
 	.widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
 		padding:0 20px;
 	}
@@ -928,11 +923,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 	.signupform fieldset input {
 		width: 100%;
-	}
-	.widget .extendednavigation a.pull {
-		width: 26px;
-		height: 20px;
-		top: 0px;
 	}
 	.bk-footer .contactform input, .bk-footer .contactform textarea {
 		width:70%;
@@ -951,36 +941,9 @@ footer .widget.profile .bk-profile-socialicons span a {
 		margin: 0px auto;
 		display: table;
 	}
-	.widget .extendednavigation a.pull {
-		width: 100%;
-		margin: 0px auto;
-		display: table;
-		top: 0px;
-	}
 	.widget .extendednavigation ul {
 		position:relative;
 		z-index:9999;
-	}
-	.widget .extendednavigation a.pull:after {
-		content: '';
-		position: absolute;
-		width: 26px;
-		height: 3px;
-		background: @color-swatch1;
-		top: 0;
-		right: 0;
-		box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
-		margin: 0px auto;
-		display: table;
-		left: 0;
-	}
-	.navbar {
-		background-color:transparent;
-		border-bottom:none;
-		padding: 0px 0px 10px;
-		position: relative;
-		bottom: 560px;
-		display: inline-block;
 	}
 
 	.widget .extendednavigation ul li a:hover {
@@ -989,9 +952,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 	.widget .extendednavigation ul li a {
 		padding:0 20px;
-	}
-	header.bk-header, footer.bk-footer {
-		padding: 20px 0px;
 	}
 	.widgetheader .right {
 		margin: 0px auto;
@@ -1008,9 +968,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.widget.companyname {
 		width: 100%;
 		margin-top: 5px;
-	}
-	.extendednavigation {
-		padding-top:10px;
 	}
 	.textwidget {
 		width:100%;
@@ -1033,25 +990,11 @@ footer .widget.profile .bk-profile-socialicons span a {
 		margin:0px auto;
 		display:table;
 	}
-	.navbar .left {
-		float: left;
-		width: 100%;
-	}
 	.extendednavigation ul {
 		background-color:@color-swatch3;
 	}
 	.widget.feature .feature-bgimg .content {
 		height:500px;
-	}
-	.navbar .widget.profile {
-		float:none;
-		text-align:center;
-	}
-	.navbar .widget.profile {
-		float: none;
-		text-align: center;
-		margin-top: 50px;
-		padding-top: 30px;
 	}
 	.widget.feature h2 {
         font-size: bkscale(@font-swatch8-font-size, 0.8);
@@ -1091,9 +1034,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.bk-pt-default header.bk-header {
 		padding:20px 0px 20px;
 		border-bottom:0;
-	}
-	header.bk-header {
-		padding:0px 0px 80px 0px;
 	}
 	.widget .extendednavigation ul li:hover ul {
 		background-color:@color-swatch3;

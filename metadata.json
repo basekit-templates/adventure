@@ -132,9 +132,9 @@
         },
         "font9": {
             "font-family": "\"Oxygen\", \"Helvetica\", Arial, sans-serif",
-            "font-size": "14px",
-            "font-weight": "300",
-            "line-height": "22px",
+            "font-size": "16px",
+            "font-weight": "inherit",
+            "line-height": "32px",
             "color": "@color-swatch3",
             "letter-spacing": "inherit"
         },
