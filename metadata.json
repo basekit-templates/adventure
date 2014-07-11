@@ -109,7 +109,7 @@
             "color": "@color-swatch1",
             "letter-spacing": "inherit",
             "color-hover": "@color-swatch1",
-            "background-color": "@color-swatch7",
+            "background-color": "fade(@color-swatch4,40%)",
             "background-color-hover": "@color-swatch2"
          },
         "font7": {
