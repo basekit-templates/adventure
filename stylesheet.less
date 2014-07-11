@@ -39,6 +39,7 @@ body {
 	position: relative;
 	bottom:0;
 	margin-top:0;
+	background-color:@color-swatch7;
 }
 
 .bk-pt-default .widget .extendednavigation > ul > li > a {
@@ -220,6 +221,8 @@ header.bk-header {
 
 .widget .extendednavigation ul li.folder:after {
 	border-top-color:@font-swatch6-color;
+	top:48%;
+	right: 20px;
 }
 
 .widget .extendednavigation ul li a {
@@ -228,10 +231,6 @@ header.bk-header {
 
 .widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
 	padding:20px 35px;
-}
-
-.widget .extendednavigation ul li.folder:after {
-	top:48%;
 }
 
 .widget .extendednavigation ul li.folder .text:hover {
@@ -335,6 +334,14 @@ header.bk-header {
 	padding:0;
 }
 
+.blog-post-summary {
+	margin-bottom:1px;
+}
+
+.blog-post-sharing {
+	padding: 10px 40px;
+}
+
 /*	===============================
 	Menu
 	=============================== */
@@ -344,6 +351,12 @@ header.bk-header {
 	background-color:@color-swatch3;
 	color:@font-swatch7-color;
 	font-weight:400;
+	font-size:14px;
+	padding: 0px 5px 3px 5px;
+}
+
+.menu .menu-section-item-dietary-props .dietary-icon, .menu .menu-info .dietary-icon {
+	border: 2px solid @color-swatch7;
 }
 
 .menu-item-promoted {
@@ -368,10 +381,6 @@ header.bk-header {
 .menu-subsection h2 {
 	font-size:@font-swatch1-font-size;
 	font-weight:@font-swatch1-font-weight;
-}
-
-.dietary-icon {
-	padding: 5px 5px 3px 5px;
 }
 
 .menu-item-image-wrap {
@@ -402,11 +411,10 @@ input,
 .signupform fieldset input, 
 .widget.contactform form fieldset textarea, 
 .widget.contactform form fieldset input  {
-	background-color:@color-swatch3;
     text-indent:3px;
     border-radius:0;
-    color:@font-swatch6-color;
     border:2px solid @color-swatch7;
+	background-color: darken(@color-swatch1,3%);
 }
 
 .widget.ecomcheckout .checkout-order-button, 
@@ -495,6 +503,10 @@ time {
 	padding:0;
 }
 
+h5 {
+	color:@font-swatch4-color;
+}
+
 .widget.responsiveslideshow .title, .widget.responsiveslideshow .description {
 	color:@font-swatch7-color;
 	text-align:center;
@@ -527,14 +539,13 @@ textarea.message {
 	padding: 0;
 	margin: 0;
 	padding: 20px 20px 0px 20px;
-	background-color:lighten(@color-swatch3,90%);
     border-radius:0;
-    border:3px solid @color-swatch7;
+    border: 2px solid @color-swatch7;
+	background-color: darken(@color-swatch1,3%);
 }
 
-.twitter ul li a {
-	font-size: 14px;
-	font-weight: 300;
+.widget.twitter img {
+	border:2px solid @color-swatch7;
 }
 
 .widget.companyname a {
@@ -569,8 +580,8 @@ textarea.message {
     background-color: darken(@color-swatch1,3%);
     background-position-x: 98%;
     background-position-y: 53%;
-	background-color:@color-swatch1;
-	border:1px solid darken(@color-swatch1,5%);
+    border:2px solid @color-swatch7;
+	background-color: darken(@color-swatch1,3%);
     border-radius:0;
 }
 
@@ -591,11 +602,10 @@ textarea.message {
     background-position: right 6% center;
     background-repeat: no-repeat;
     border: 0;
-    background-color: darken(@color-swatch1,3%);
     background-position-x: 99%;
     background-position-y: 53%;
-	background-color:@color-swatch1;
-	border:1px solid darken(@color-swatch1,5%);
+    border:2px solid @color-swatch7;
+	background-color: darken(@color-swatch1,3%);
     border-radius:0;
 }
 
@@ -619,8 +629,8 @@ select {
     background-color: darken(@color-swatch1,3%);
     background-position-x: 95%;
     background-position-y: 53%;
-	background-color:@color-swatch1;
-	border:1px solid darken(@color-swatch1,5%);
+    border:2px solid @color-swatch7;
+	background-color: darken(@color-swatch1,3%);
     border-radius:0;
 }
 
@@ -666,11 +676,25 @@ select::-ms-expand {
 }
 
 .widget.ecombasket .ecombasket-pull {
-	border: 3px solid @color-swatch7;
+	border: 2px solid @color-swatch7;
 }
 
 .widget.ecombasket .ecombasket-pull p {
 	font-weight:400;
+}
+
+.widget.ecomcheckout input {
+    border:2px solid @color-swatch7;
+	background-color: darken(@color-swatch1,3%);
+}
+
+.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link:hover {
+	background-color:lighten(@color-swatch3,10%);
+}
+
+a.ecombasket-checkout-link {
+	text-decoration: none;
+	border: 2px solid @color-swatch7;
 }
 
 /* ===============================
@@ -826,10 +850,13 @@ footer .widget.profile .bk-profile-socialicons span a {
 .left .widget.profile, .bk-footer .left {
 	float:left;
 	padding-top: 10px;
+	max-width:50%;
 }
 
 .bk-footer .right {
 	float:right;
+	margin-right:10px;
+	max-width:50%;
 }
 
 .bk-footer .contactform input, .bk-footer .contactform textarea {
