@@ -38,6 +38,7 @@ body {
 .bk-pt-default .navbar {
 	position: relative;
 	bottom:0;
+	margin-top:0;
 }
 
 .bk-pt-default .widget .extendednavigation > ul > li > a {
@@ -186,8 +187,8 @@ header.bk-header {
 .navbar {
 	padding: 0;
 	width: 100%;
-	position: absolute;
-	bottom: 65px;
+	position: relative;
+	margin-top:-66px;
 	background-color: rgba(26, 26, 26, 0.6);
 	.left {
 		float:left;
@@ -949,6 +950,10 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.navbar {
 		background-color:transparent;
 		border-bottom:none;
+		padding: 0px 0px 10px;
+		position: relative;
+		bottom: 560px;
+		display: inline-block;
 	}
 
 	.widget .extendednavigation ul li a:hover {
@@ -976,9 +981,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.widget.companyname {
 		width: 100%;
 		margin-top: 5px;
-	}
-	.navbar {
-		padding: 0px 0px 10px;
 	}
 	.extendednavigation {
 		padding-top:10px;
@@ -1079,14 +1081,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 		width: 95%;
 		margin: 0 2.5%;
 	}
-	.navbar {
-		position: relative;
-		bottom:0;
-	}
-	.navbar {
-		position:absolute;
-		top: 150px;
-	}
 	.widget .extendednavigation ul li.folder {
 		margin-right:0;
 	}
@@ -1173,10 +1167,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.widget.feature {
 		display:none;
 	}
-	.navbar {
-		margin-top:0;
-		padding:0;
-	}
 	.navbar .left {
 		float: left;
 		padding: 0px 0px 10px 2px;
@@ -1205,5 +1195,14 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 	.featurebackground {
 		display:none;
+	}
+	header.bk-header {
+		padding:0px 0px 20px 0px;
+		border-bottom:0;
+	}
+	.navbar {
+		bottom:0;
+		background-color:@color-swatch3;
+		padding:20px 0px;
 	}
 }
