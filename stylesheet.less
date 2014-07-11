@@ -36,8 +36,8 @@ body {
 	=============================== */
 
 .bk-pt-default .navbar {
-	background-color: @color-swatch7;
-	margin-top:0;
+	position: relative;
+	bottom:0;
 }
 
 .bk-pt-default .widget .extendednavigation > ul > li > a {
@@ -184,9 +184,11 @@ header.bk-header {
 	=============================== */
 
 .navbar {
-	background-color: rgba(0, 0, 0, 0.3);
-	margin-top: -66px;
-	position: relative;
+	padding: 0;
+	width: 100%;
+	position: absolute;
+	bottom: 115px;
+	background-color: rgba(26, 26, 26, 0.6);
 	.left {
 		float:left;
 	}
@@ -233,10 +235,6 @@ header.bk-header {
 
 .widget .extendednavigation ul li.folder .text:hover {
 	color:@font-swatch6-color;
-}
-
-.widget .extendednavigation ul li:hover ul {
-	background-color:@color-swatch7;
 }
 
 .widget .extendednavigation ul li.folder .text {
@@ -864,9 +862,9 @@ footer .widget.profile .bk-profile-socialicons span a {
         line-height: bkscale(@font-swatch9-line-height, 0.9);
     }
 }
-@media only screen and (max-width: 1024px) {
-	.bk-footer .contactform input, .bk-footer .contactform textarea {
-		width:70%;
+@media only screen and (max-width: 1294px) {
+	.widget.feature .feature-bgimg .content{
+		height: 684px;
 	}
 }
 
@@ -883,6 +881,8 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 	.widget .extendednavigation ul {
 		padding-top:0;
+		top: 15px;
+		position: absolute!important;
 	}
 	.widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
 		padding:0 20px;
@@ -981,7 +981,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 		padding: 0px 0px 10px;
 	}
 	.extendednavigation {
-		padding-top:20px;
+		padding-top:10px;
 	}
 	.textwidget {
 		width:100%;
@@ -1042,7 +1042,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 		background-color:transparent;
 	}
 	.bk-pt-default .navbar .left {
-		margin: 30px 0px 0px 0px;
+		margin: 10px 0px 0px 0px;
 	}
 	.bk-pt-default .widget .extendednavigation ul li a, .bk-pt-default .widget .extendednavigation ul > li.folder > .text {
 		color:@font-swatch6-color;
@@ -1055,12 +1055,16 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 	.bk-pt-default .navbar {
 		background-color:@color-swatch3;
+		top:0;
+		padding-bottom:30px;
+		border-bottom:5px solid @color-swatch7;
 	}
 	.bk-pt-default header.bk-header {
-		padding:20px 0px 50px;
+		padding:20px 0px 20px;
+		border-bottom:0;
 	}
 	header.bk-header {
-		padding:0px 0px 40px 0px;
+		padding:0px 0px 80px 0px;
 	}
 	.widget .extendednavigation ul li:hover ul {
 		background-color:@color-swatch3;
@@ -1074,6 +1078,17 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.headerwrapper {
 		width: 95%;
 		margin: 0 2.5%;
+	}
+	.navbar {
+		position: relative;
+		bottom:0;
+	}
+	.navbar {
+		position:absolute;
+		top: 150px;
+	}
+	.widget .extendednavigation ul li.folder {
+		margin-right:0;
 	}
 }	
 
@@ -1159,17 +1174,13 @@ footer .widget.profile .bk-profile-socialicons span a {
 		display:none;
 	}
 	.navbar {
-		background-color:@color-swatch3;
 		margin-top:0;
 		padding:0;
 	}
 	.navbar .left {
 		float: left;
-		padding: 30px 0px 10px 2px;
+		padding: 0px 0px 10px 2px;
 		width: 100%;
-	}
-	.bk-pt-default .navbar .left {
-		margin:0px;
 	}
 	.featurebackground {
 		min-height: 22px;
@@ -1191,5 +1202,8 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.bk-footer .right {
 		width: 100%;
 		text-align: center;
+	}
+	.featurebackground {
+		display:none;
 	}
 }
