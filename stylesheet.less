@@ -198,7 +198,16 @@ header.bk-header {
 }
 
 .widget .extendednavigation ul li:hover ul {
-	background-color:@color-swatch3;
+	background-color:lighten(@color-swatch3,15%);
+}
+
+.widget .extendednavigation ul.align-right li.folder:after {
+    left: 20px;
+    right: inherit;
+}
+
+.widget.extendednavigation li:hover > ul > li > a {
+	padding-right:20px;
 }
 
 /*	===============================
