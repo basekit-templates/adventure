@@ -41,10 +41,6 @@ body {
 	background-color:@color-swatch7;
 }
 
-.bk-pt-default .widget .extendednavigation > ul > li > a {
-	padding: 20px 35px;
-}
-
 .bk-pt-default .widget.extendednavigation {
 	margin-top:0;
 }
@@ -77,6 +73,7 @@ header.bk-header {
 		text-align: right;
 	}
 }
+
 
 .widget {
 	&.logo, &.companyname {
@@ -208,6 +205,13 @@ header.bk-header {
 
 .widget.extendednavigation li:hover > ul > li > a {
 	padding-right:20px;
+}
+
+.extendednavigation li.selected {
+    a, .text {
+        color: @font-swatch6-color-hover;
+        background-color:@color-swatch3;
+    }
 }
 
 /*	===============================
@@ -379,10 +383,6 @@ header.bk-header {
 	padding: 0px 5px 3px 5px;
 }
 
-.menu .menu-section-item-dietary-props .dietary-icon, .menu .menu-info .dietary-icon {
-	border: 2px solid @color-swatch7;
-}
-
 .menu-item-promoted {
 	background-color: darken(@color-swatch1,6%);
 	padding:20px!important;
@@ -465,7 +465,7 @@ input,
 .widget.ecombasket .ecombasket-pull:hover, 
 .blog-search-submit-button:hover, 
 button.btn:hover {
-	background-color:lighten(@color-swatch3,10%)!important;
+	background-color:lighten(@color-swatch3,15%)!important;
 }
 
 .widget.profile form button {
@@ -548,6 +548,14 @@ textarea.message {
 	background-color:@color-swatch3;
 }
 
+.widget.socialicons, .widget.profile .bk-profile-socialicons {
+  min-height:32px;
+}
+
+.widget.socialicons span a, .widget.profile .bk-profile-socialicons span a {
+  text-align:center;
+}
+
 .contactform label {
 	font-family:@font-swatch4-font-family; 
 	font-weight: @font-swatch4-font-weight; 
@@ -572,12 +580,66 @@ textarea.message {
 	border:2px solid @color-swatch7;
 }
 
+.widget.twitter .twitter-content span.bk-full-name {
+    line-height:60px;
+}
+
 .widget.companyname a {
 	font-weight:@font-swatch10-font-weight;
 }
 
 .form-group.productlist-search button.btn {
 	padding:7px 14px 6px;
+}
+
+// -----------------------------
+// Gallery
+// -----------------------------
+
+.widget.gallery {
+    margin: 20px 0 20px -0.5%;
+    ul li {
+        @media @tablet {
+            width: 50%;
+            padding-bottom: 50%;
+        }
+        @media @mobile {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+        span.inner {
+            .title,
+            .description {
+                // Font
+                color: @color-swatch1;
+                font-family: @font-swatch4-font-family;
+                letter-spacing: @font-swatch4-letter-spacing;
+                text-align: left;
+            }
+            .title {
+                font-size: 19px;
+                font-weight: 600;
+                line-height: 26px;
+            }
+            .description {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    // Image Data
+    .image-data {
+        display: block;
+        opacity: 0;
+        background-color: @color-swatch3;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
 
 /*	===============================
@@ -683,18 +745,13 @@ select::-ms-expand {
 	margin-top:20px;
 	padding-top:13px;
 	&:hover{
-		background-color:lighten(@color-swatch3,10%);
+		background-color:lighten(@color-swatch3,15%);
 		text-decoration: none;
 	}
 }
 
 .ecom-product-add-to-cart-btn {
 	padding-top:10px;
-}
-
-.widget.ecomcheckout {
-	width:80%;
-	margin:0 10%;
 }
 
 .widget.ecombasket .ecombasket-pull {
@@ -711,12 +768,16 @@ select::-ms-expand {
 }
 
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link:hover {
-	background-color:lighten(@color-swatch3,10%);
+	background-color:lighten(@color-swatch3,15%);
 }
 
 a.ecombasket-checkout-link {
 	text-decoration: none;
 	border: 2px solid @color-swatch7;
+}
+
+.widget.ecomcheckout table tr td .checkout-quantitybtn button:hover {
+	background-color:lighten(@color-swatch3,15%);
 }
 
 /* ===============================
@@ -921,6 +982,10 @@ footer .widget.profile .bk-profile-socialicons span a {
 @media only screen and (max-width: 768px) {
 	.widget .extendednavigation ul li {
 		border:0;
+		padding:0;
+	}
+	.widget .extendednavigation ul li a {
+		padding:10px 20px;
 	}
 	.widget.extendednavigation {
 		width:100%;
@@ -930,7 +995,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 		left: inherit !important;
 	}
 	.widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
-		padding:0 20px;
+		padding:10px 20px;
 	}
 	select {
 		width:100%;
@@ -966,14 +1031,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.widget .extendednavigation ul {
 		position:relative;
 		z-index:9999;
-	}
-
-	.widget .extendednavigation ul li a:hover {
-		margin-bottom: 0;
-		padding-bottom: 0;
-	}
-	.widget .extendednavigation ul li a {
-		padding:0 20px;
 	}
 	.widgetheader .right {
 		margin: 0px auto;
@@ -1041,9 +1098,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.bk-pt-default .widget .extendednavigation ul li a, .bk-pt-default .widget .extendednavigation ul > li.folder > .text {
 		color:@font-swatch6-color;
 	}
-	.bk-pt-default .widget .extendednavigation > ul > li > a {
-		padding:0px 20px;
-	}
 	.bk-pt-default .navbar .widget.profile {
 		padding-top:10px;
 	}
@@ -1079,6 +1133,15 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 	span.spare.wrapper {
 		width:100%;
+	}
+	.form-group.productlist-search input {
+		width:60%;
+	}
+	.form-group.productlist-search label {
+		display:block;
+	}
+	.widget .extendednavigation ul li:hover ul {
+		margin:0;
 	}
 }	
 
@@ -1154,7 +1217,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.blog-post-title {
 		padding:0px 20px;
 	}
-	.blog-post-summary, .blog-post-more-link, time, .blog-post-content, .blog-post-category, .blog-post-tags {
+	.blog-post-summary, .blog-post-more-link, .blog-post-content, .blog-post-category, .blog-post-tags {
 		padding:0px 20px;
 	}
 	.widget.feature .feature-bgimg .content {
@@ -1173,7 +1236,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 		padding: 10px 20px 0px;
 	}
 	.blog-post-item time {
-		padding:20px 0px;
+		padding:20px 20px;
 	}
 	.blog-post-title {
 		padding: 15px 20px 0px 20px;
@@ -1188,5 +1251,14 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 	.featurebackground {
 		display:none;
+	}
+	.blog-post-sharing {
+		padding: 10px 20px;
+	}
+	.widget .extendednavigation ul li a {
+		padding:2px 20px;
+	}
+	.widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
+		padding:2px 20px;
 	}
 }
