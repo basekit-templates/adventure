@@ -2,7 +2,7 @@
 	"name":"adventure",
 	"thumbnail":"adventure.png",
 	"screenshot":"adventure.png",
-	"templateType":"Standard Template",
+	"templateType":"standard",
         "pageTypes": [
         "home"
     ],
