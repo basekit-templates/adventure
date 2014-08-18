@@ -97,6 +97,10 @@ header.bk-header {
 	vertical-align:middle;
 }
 
+.widget.logo {
+	margin-bottom: 20px;
+}
+
 #textwidgetbox1 {
 	float:right;
 }
@@ -176,13 +180,14 @@ header.bk-header {
 
 .widget .extendednavigation ul li a {
 	padding: 5px 20px;
-} 
+}
 
 .widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
 	padding:20px 35px;
 }
 
-.widget .extendednavigation ul li.folder .text:hover {
+.widget .extendednavigation ul li.folder .text:hover,
+.widget .extendednavigation ul li.folder.selected {
 	color:@font-swatch6-color;
 }
 
@@ -276,7 +281,7 @@ header.bk-header {
 	display: block;
 	background-color: rgba(255, 255, 255, 0.8);
 	margin: 0;
-	margin-bottom:50px;
+	margin-bottom:100px;
 }
 
 .widget.feature h2 {
