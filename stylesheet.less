@@ -55,7 +55,7 @@ body {
 }
 
 .bk-pt-default .widget .extendednavigation ul li.folder:after {
-	border-top-color:@color-swatch3;
+	border-top-color: lighten(@color-swatch3, 30%);
 }
 
 /*	===============================
@@ -848,6 +848,13 @@ a.ecombasket-checkout-link {
 	margin-top:30px;
 }
 
+
+	// Filter select
+
+.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group label {
+	display: block;
+}
+
 // Ecom Basket Summary
 
 .ecombasketsummary a {
@@ -1408,9 +1415,10 @@ footer .widget.profile .bk-profile-socialicons span a {
 		padding:20px 0px 20px;
 		border-bottom:0;
 	}
-	.bk-pt-default .widget .extendednavigation ul li.folder:after {
-		border-top-color: @color-swatch1;
-	}
+	// .bk-pt-default .widget .extendednavigation ul li.folder:after {
+	// 	border-top-color: @color-swatch1;
+	// }
+
 	.logo-container {
 		margin-bottom:20px;
 	}
