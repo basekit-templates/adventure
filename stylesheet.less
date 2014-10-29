@@ -45,7 +45,7 @@ body {
 	margin-top:0;
 }
 
-.bk-pt-default .widget .extendednavigation ul li a {
+.bk-pt-default .widget .extendednavigation ul li a, .bk-pt-default .widget .extendednavigation ul > li.folder > .text {
 	color:@font-swatch4-color;
 }
 
@@ -73,8 +73,11 @@ body {
     }
 }
 
-.bk-pt-default .widget .extendednavigation ul > li.folder > .text {
-	color:@font-swatch10-color;
+.bk-pt-default .widget .extendednavigation ul li.folder li.selected {
+    .text {
+        color: @font-swatch6-color-hover;
+        background-color:@color-swatch3;
+    }
 }
 
 /*	===============================
