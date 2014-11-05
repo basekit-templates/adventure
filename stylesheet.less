@@ -21,6 +21,9 @@ body {
 .wrapper {
 	width: auto;
 	margin: 0 auto;
+	@media @tablet {
+		max-width:100%;
+	}
 }
 
 .page-wrap {
@@ -339,6 +342,10 @@ header.bk-header {
 	margin: 0;
 	margin-bottom:100px;
 	max-width:65%;
+	@media @tablet {
+		max-width:100%;
+		width:100%;
+	}
 }
 
 .widget.feature h2 {
@@ -1471,9 +1478,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 		top:10px;
 		margin:0px auto;
 		z-index:99999;
-	}
-	.spare.wrapper {
-		width:100%!important;
 	}
 	.left .widget.profile, .bk-footer .left {
 		width: 100%;
