@@ -340,16 +340,20 @@ header.bk-header {
 	display: inline-block;
 	background-color: rgba(255, 255, 255, 0.8);
 	margin: 0;
-	margin-bottom:100px;
+	margin-bottom:65px;
 	max-width:65%;
 	@media @tablet {
 		max-width:100%;
 		width:100%;
+		margin-bottom:0;
 	}
 }
 
 .widget.feature h2 {
 	padding: 20px 40px 0px 40px;
+	@media @tablet {
+		padding: 0px 40px 0px 40px;
+	}
 }
 
 .widget.feature h3 {
