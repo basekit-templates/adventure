@@ -1,7 +1,7 @@
 {
 	"name":"adventure",
 	"thumbnail":"adventure.png",
-	"screenshot":"adventure.png",
+	"screenshot":"adventure-screenshot.jpg",
 	"templateType":"standard",
         "pageTypes": [
         "home"
