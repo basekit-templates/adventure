@@ -80,6 +80,15 @@ body {
     }
 }
 
+[data-widget-type="feature"] + .navbar,
+[data-widget-type="feature"].bk-tpl-hidden + .navbar {
+	position: absolute;
+}
+
+.navbar {
+	position: relative;
+}
+
 /*	===============================
 	Header
 	=============================== */
@@ -291,7 +300,6 @@ header.bk-header {
 }
 
 .navbar {
-	position: absolute;
 	bottom: 0;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.3);
