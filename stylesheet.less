@@ -519,7 +519,9 @@ input,
 .signupform fieldset input,
 .widget.contactform form fieldset textarea,
 .widget.contactform form fieldset input,
-.widget.fonectacontactform textarea  {
+.widget.fonectacontactform textarea,
+.advancedcontactform textarea,
+.advancedcontactform input  {
     text-indent:3px;
     border-radius:0;
     border:2px solid @color-swatch7;
@@ -531,7 +533,8 @@ input,
 .widget.profile form button,
 .signupform fieldset button,
 .blog-search-submit-button,
-.widget.button button, button.btn {
+.widget.button button, button.btn,
+.advancedcontactform button {
 	background-color:@color-swatch3;
     border:2px solid @color-swatch7;
 }
@@ -549,7 +552,8 @@ input,
 .widget.tweet a:hover,
 .widget.ecombasket .ecombasket-pull:hover,
 .blog-search-submit-button:hover,
-button.btn:hover {
+button.btn:hover,
+.advancedcontactform button:hover {
 	background-color:lighten(@color-swatch3,15%)!important;
 }
 
@@ -703,6 +707,23 @@ textarea.message {
 .form-group.productlist-search button.btn {
 	padding:7px 14px 6px;
 }
+
+// Advanced Contact Form
+.advancedcontactform {
+    .label {
+        margin-bottom: 10px;
+    }
+    .input {
+        width: 100%;
+    }
+    .form-group {
+        margin-bottom: 10px;
+    }
+    select {
+        margin-top: 10px;
+    }
+}
+
 
 // -----------------------------
 // Gallery
