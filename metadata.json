@@ -60,9 +60,9 @@
         }
     },
     "fontSwatch": {
-       "title": "Oxygen",
+       "title": "Open Sans",
         "font1": {
-            "font-family": "\"Open sans\", \"Helvetica\", Arial, sans-serif",
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
             "font-size": "28px",
             "font-weight": "300",
             "line-height": "38px",
@@ -70,7 +70,7 @@
             "letter-spacing": "inherit"
         },
         "font2": {
-            "font-family": "\"Open sans\", \"Helvetica\", Arial, sans-serif",
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
             "font-size": "24px",
             "font-weight": "300",
             "line-height": "32px",
@@ -78,7 +78,7 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "\"Open sans\", \"Helvetica\", Arial, sans-serif",
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
             "font-size": "18px",
             "font-weight": "400",
             "line-height": "24px",
@@ -86,7 +86,7 @@
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "\"Open sans\", \"Helvetica\", Arial, sans-serif",
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
             "font-size": "16px",
             "font-weight": "300",
             "line-height": "30px",
@@ -94,7 +94,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"Open sans\", \"Helvetica\", Arial, sans-serif",
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
             "font-size": "15px",
             "font-weight": "300",
             "line-height": "26px",
@@ -102,7 +102,7 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"Open sans\", \"Helvetica\", Arial, sans-serif",
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "26px",
@@ -139,7 +139,7 @@
             "letter-spacing": "inherit"
         },
         "font10": {
-            "font-family": "\"Merriweather\", \"Helvetica\", Arial, sans-serif",
+            "font-family": "\"Merriweather\", Georgia, serif",
             "font-size": "28px",
             "font-weight": "700",
             "line-height": "36px",
