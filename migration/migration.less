@@ -6,8 +6,8 @@
 // Site Layout and Spacing
 // -----------------------------
 
-@site-container: 960px;
-@site-margin: auto;
+@site-container: 80%;
+@site-margin: 10%;
 @spacing--desktop: 40px;
 
 
@@ -22,6 +22,12 @@
     width: 90%;
 }
 
+
+// Retain original footer wrapper CSS
+.bk-footer .mainwrapper {
+    width: 98%;
+    margin: 0 1%;
+}
 
 // Move spacing to first widget in the main zone (not sections)
 .edit #page-zones__main-overlay + .widget:not(.row),
@@ -50,4 +56,10 @@
     &:not(:last-child) {
          margin-bottom: 0;
     }
+}
+
+
+// Move text editing toolbar in 10s
+#migrated-site .bk-header .texteditor-toolbar-wrapper {
+    top: 50px !important;
 }
