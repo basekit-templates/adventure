@@ -7,7 +7,7 @@
 // -----------------------------
 
 @site-container: 80%;
-@site-margin: 10%;
+@site-margin: 11.5%;
 @spacing--desktop: 40px;
 
 
@@ -19,7 +19,12 @@
     margin-left: @site-margin;
     margin-right: @site-margin;
     max-width: @site-container;
-    width: 90%;
+    
+    @media @tablet {
+        margin-left: 5%;
+        margin-right: 5%;
+        max-width: 100%;
+    }
 }
 
 
